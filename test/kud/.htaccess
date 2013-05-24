@@ -1,0 +1,26 @@
+RewriteEngine On
+RewriteBase /kud/
+RewriteRule ^home$ ?act=home
+RewriteRule ^barang$ ?act=barang
+RewriteRule ^barang-order-(.*)-(.*)$ ?act=barang&order=$1&sort=$2
+RewriteRule ^barang-([0-9]+)-edit$ ?act=barang&proses=edit&id=$1
+RewriteRule ^barang-([0-9]+)-hapus$ ?act=barang&proses=hapus&id=$1
+RewriteRule ^barang-([0-9]+)-titip$ ?act=barang&proses=titip&id=$1
+RewriteRule ^anggota$ ?act=anggota
+RewriteRule ^anggota-order-(.*)-(.*)$ ?act=anggota&order=$1&sort=$2
+RewriteRule ^anggota-([0-9]+)-edit$ ?act=anggota&proses=edit&id=$1
+RewriteRule ^anggota-([0-9]+)-hapus$ ?act=anggota&proses=hapus&id=$1
+RewriteRule ^kasir$ ?act=kasir
+RewriteRule ^kasir-order-(.*)-(.*)$ ?act=kasir&order=$1&sort=$2
+RewriteRule ^kasir-([0-9]+)-edit$ ?act=kasir&proses=edit&id=$1
+RewriteRule ^kasir-([0-9]+)-hapus$ ?act=kasir&proses=hapus&id=$1
+RewriteRule ^layanan$ ?act=layanan
+RewriteRule ^laporan$ ?act=laporan
+RewriteRule ^laporan-order-(.*)-(.*)$ ?act=laporan&order=$1&sort=$2
+RewriteRule ^cari$ ?act=cari
+RewriteRule ^cari-order-(.*)-(.*)$ ?act=cari&order=$1&sort=$2
+RewriteRule ^transaksi$ ?act=transaksi
+RewriteRule ^transaksi-id-([0-9]+)$ ?act=transaksi&id_barang=$1
+RewriteRule ^logout$ ?act=logout
+
+ErrorDocument 404 /kud/pagenotfound.php
